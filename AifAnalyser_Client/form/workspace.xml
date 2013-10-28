@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uifwks:Workspace version="1" xmlns:uifwks="http://www.amdocs.com/uif/workspace"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.amdocs.com/uif/workspace file:/C:/dev/portfolio/uif/dev/client/UIFRuntime/src/com/amdocs/uif/workspace/workspace.xsd">
+  <!-- ******************************************************************************** -->
+  <!-- See workspace.xsd for complete list of configurable items and their definitions. -->
+  <!-- ******************************************************************************** -->
+  <SplashScreen image="amdocs.jpg">
+    <Progress x="0" y="235" height="3" color="#000000"/>
+    <ProgressText x="20" y="215" font="Arial Unicode MS Bold 10" color="#000000"/>
+  </SplashScreen>
+  <Applications>
+    <Application name="com/amdocs/desktop/crm/AmdocsCim.uifad" defaultHelpId="cim_overview.htm"/> 
+    <Application name="com/amdocs/desktop/crm/AmdocsInventoryManager.uifad" defaultHelpId="im_inventory_mgr_overview.htm"/> 
+    <Application name="com/amdocs/desktop/crm/AmdocsSales.uifad" defaultHelpId="sa_isales_overview.htm"/>
+    <Application name="com/amdocs/desktop/crm/AmdocsSupport.uifad" defaultHelpId="isupport_overview.htm"/> 
+    <Application name="com/amdocs/desktop/crm/AmdocsContracts.uifad" defaultHelpId="ct_contracts_overview.htm"/> 
+    <Application name="com/amdocs/desktop/crm/AmdocsAdmin.uifad" defaultHelpId="ca_about_clarifycrm_administrator.htm"/>
+    <Application name="com/amdocs/desktop/crm/AmdocsQuality.uifad" defaultHelpId="cmq_quality_overview.htm"/>
+    <Application name="com/amdocs/desktop/crm/AmdocsChangeManager.uifad" defaultHelpId="cm_chg_mgr_overview.htm"/>
+    <Application name="com/amdocs/desktop/crm/AmdocsBillingCare.uifad" defaultHelpId="billing_care_menu_com.htm"/>
+    <Application name="com/amdocs/desktop/crm/AmdocsDeviceCare.uifad" defaultHelpId="dc_amdocs_device_care.htm"/>    
+  </Applications>
+  <HelpFrameSets>
+    <HelpFrameSet default="true" connectionString="help.htm?topic=" url="http://indlin223:10100/AmdocsHelp/crm/" language="en"/>
+  </HelpFrameSets>
+  <ResourceBundle>
+    <TranslationLocales>
+      <TranslationLocale default="true" language="en" country="US"/>
+    </TranslationLocales>
+  </ResourceBundle>
+  <!-- Indicates if the stack trace of an exception should be shown to the user.         --> 
+  <!-- When it is false, the Details button on the Internal Error Dialog will be hidden. -->
+  <ShowStackTrace>true</ShowStackTrace>
+  <Logging>       	  
+    <!-- FilterLevel sets the level that, below which, logs are discarded.         -->
+    <!-- This is also the default level for all the Filters.                       -->
+    <!-- Filter levels:  SEVERE, WARNING, INFO, CONFIG, DEBUG, FINE, FINER, FINEST -->	
+    <FilterLevel>SEVERE</FilterLevel>
+    <!-- Log browser will show log records that match the below filter criteria.   -->
+    <!-- Filters apply to logs created using UifForm log APIs.                     -->
+    <Filters>
+      <Filter form="*" type="*" category="*" level="WARNING" />
+      <Filter type="performance" level="FINE" />
+      <!--Filter form="com.amdocs.oms.desktop.CacheManagerGlobal" category="Form" level="INFO" /-->
+    </Filters>
+    <!-- An error dialog is shown for logs at or above the level set below. -->
+    <ShowErrorDialog level="SEVERE"/> 
+    <!-- Indicates if a displayable exception should be logged. -->
+    <DisplayableExceptionLogged>false</DisplayableExceptionLogged>
+    <!-- Specifies the log levels and percentage of a log to send to server. -->
+    <SendToServer level="SEVERE" percentage="100"/>
+    <!-- The number of log records in the circular buffer client cache for sending to server. -->
+    <BufferSize>1000</BufferSize>
+    <OMSettings bufferSize="100" percentage="90" />
+  </Logging>
+  <!-- The server element defines configuration parameters for connecting to server. -->
+  <Server id="CRM" url="http://indlin223:10100/crm" protocol="HTTP" loginFormName="com.amdocs.crm.common.desktop.CRMLogin" reloginFormName="com.amdocs.crm.common.desktop.CRMRelogin">
+    <Backend id="crm"/>
+</Server>
+<Server id="omsserver" url="http://${oms.host}:10100/UifServer" protocol="HTTP" loginFormName="com.amdocs.oms.base.LoginOrderingForm" reloginFormName="com.amdocs.crm.common.desktop.CRMRelogin" canAuthenticate="false">
+   <Backend id="Ordering" desktopInitMode="Deferred"/>
+</Server>
+  <Task corePoolSize="10" maxThreads="100"/>
+  <InitParam>
+    <ParamName>AttachmentLimit</ParamName>
+    <ParamValue>5</ParamValue>
+    <Description>Attachment size limit specified in MB</Description>
+  </InitParam>
+  <InitParam>
+    <ParamName>TestTool_SmartInspector</ParamName>
+    <ParamValue>true</ParamValue>  	
+  </InitParam>
+  <InitParam>
+    <ParamName>gridDefaultMaxNumRequested</ParamName>
+    <ParamValue>200</ParamValue>
+    <Description>Default Maximum Number of results for search grid</Description>
+  </InitParam>
+  <InitParam>
+    <ParamName>uifSearchGridCustomCenterPanel</ParamName>
+    <ParamValue>com.crmphd.crm.common.X3SearchGridHeader</ParamValue>
+    <Description>Header of search screens</Description> 
+   </InitParam>
+   <InitParam>
+    <ParamName>version</ParamName>
+    <ParamValue>CIM2</ParamValue>
+    <Description>determines if we need version selector for CIM2 or CIM1</Description>
+  </InitParam>
+  <InitParam>
+		<ParamName>BuildNumber</ParamName>
+		<ParamValue>683</ParamValue>
+		<Description>Build Number</Description>
+  </InitParam>
+  <TitleBarDisplay value="Breadcrumb"/>
+</uifwks:Workspace>

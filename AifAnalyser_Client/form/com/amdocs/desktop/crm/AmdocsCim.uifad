@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Application icon="application.desktop.icon" title="application.desktop.title">
+  <MenuBar>
+    <Menu description="menu.menu80.description" name="menuFile" text="menu.menu80.text">
+      <ActionRef accelerator="actionref.menuItem296.accelerator" acceleratorKey="actionref.menuItem296.acceleratorKey" action="fileNewDesktopGlobalAction" name="menuItemFileNewDesktop" text="actionref.menuItem296.text"/>
+      <ActionRef accelerator="actionref.menuItem297.accelerator" acceleratorKey="actionref.menuItem297.acceleratorKey" action="filePreferencesGlobalAction" name="menuItemFilePreferences" text="actionref.menuItem297.text"/>
+      <ActionRef accelerator="actionref.menuItem298.accelerator" acceleratorKey="actionref.menuItem298.acceleratorKey" action="actionUpdateDesktopGlobalAction" name="menuItemFileUpdateDesktop" text="actionref.menuItem298.text"/>
+      <ActionRef accelerator="actionref.menuItem299.accelerator" acceleratorKey="actionref.menuItem299.acceleratorKey" action="fileSwitchMarketGlobalAction" name="menuItemFileSwitchMarket" text="actionref.menuItem299.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItemSpellCheck.accelerator" acceleratorKey="actionref.menuItemSpellCheck.acceleratorKey" action="fileSpellCheckGlobalAction" name="menuItem473" text="actionref.menuItem473.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem300.accelerator" acceleratorKey="actionref.menuItem300.acceleratorKey" action="UIF_copyFormUrlLinkAction" name="menuItemFileCopyFormLink" text="actionref.menuItem300.text"/>
+      <ActionRef accelerator="actionref.menuItem301.accelerator" acceleratorKey="actionref.menuItem301.acceleratorKey" action="UIF_pasteFormUrlLinkAction" name="menuItemFilePasteFormLink" text="actionref.menuItem301.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem302.accelerator" acceleratorKey="actionref.menuItem302.acceleratorKey" action="UIF_pageSetupAction" name="menuItemFilePageSetup" text="actionref.menuItem302.text"/>
+      <ActionRef accelerator="actionref.menuItem303.accelerator" acceleratorKey="actionref.menuItem303.acceleratorKey" action="UIF_printPreviewAction" name="menuItemFilePrintPreview" text="actionref.menuItem303.text"/>
+      <ActionRef accelerator="actionref.menuItem304.accelerator" acceleratorKey="actionref.menuItem304.acceleratorKey" action="UIF_printAction" name="menuItemFilePrint" text="actionref.menuItem304.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem305.accelerator" acceleratorKey="actionref.menuItem305.acceleratorKey" action="fileLogoutGlobalAction" name="menuItemFileExit" text="actionref.menuItem305.text"/>
+    </Menu>
+    <Menu name="menuConnect" text="menu.menu2.text">
+      <Menu name="menuConnectPhone" text="menu.menu65.text">
+        <ActionRef accelerator="actionref.menuItemConnectPhoneAccept.accelerator" acceleratorKey="actionref.menuItemConnectPhoneAccept.acceleratorKey" action="connectPhoneAcceptGlobalAction" name="menuItemConnectPhoneAccept" text="actionref.menuItem216.text"/>
+        <ActionRef action="connectPhoneNewCallGlobalAction" name="menuItemConnectPhoneNewCall" text="actionref.menuItem217.text"/>
+        <ActionRef action="connectPhoneDeclineGlobalAction" name="menuItemConnectPhoneDecline" text="actionref.menuItem220.text"/>
+        <ActionRef accelerator="actionref.menuItemConnectPhoneDisconnect.accelerator" acceleratorKey="actionref.menuItemConnectPhoneDisconnect.acceleratorKey" action="connectPhoneDisconnectGlobalAction" name="menuItemConnectPhoneDisconnect" text="actionref.menuItem221.text"/>
+        <ActionRef action="connectPhoneHoldGlobalAction" name="menuItemConnectPhoneHold" text="actionref.menuItem222.text"/>
+        <ActionRef action="connectPhoneUnholdGlobalAction" name="menuItemConnectPhoneUnhold" text="actionref.menuItem223.text"/>
+        <ActionRef action="connectPhoneMuteGlobalAction" name="menuItemConnectPhoneMute" text="actionref.menuItem224.text"/>
+        <ActionRef action="connectPhoneUnmuteGlobalAction" name="menuItemConnectPhoneUnmute" text="actionref.menuItem225.text"/>
+        <ActionRef action="connectPhoneTransferGlobalAction" name="menuItemConnectPhoneConsultTransfer" text="actionref.menuItem226.text"/>
+        <ActionRef action="connectPhoneDropGlobalAction" name="menuItemConnectPhoneDropConsult" text="actionref.menuItem227.text"/>
+        <ActionRef action="connectPhoneLoginGlobalAction" name="menuItemConnectPhoneLogin" text="actionref.menuItem228.text"/>
+        <ActionRef action="connectPhoneLogoutGlobalAction" name="menuItemConnectPhoneLogout" text="actionref.menuItem229.text"/>
+      </Menu>
+      <Menu name="menuConnectEmail" text="menu.menu66.text">
+        <ActionRef accelerator="actionref.menuItemConnectEmailAccept.accelerator" acceleratorKey="actionref.menuItemConnectEmailAccept.acceleratorKey" action="connectEmailAcceptGlobalAction" name="menuItemConnectEmailAccept" text="actionref.menuItem213.text"/>
+        <ActionRef action="connectEmailDeclineGlobalAction" name="menuItemConnectEmailDecline" text="actionref.menuItem214.text"/>
+        <ActionRef action="connectEmailCreateGlobalAction" name="menuItemConnectEmailCreate" text="actionref.menuItem215.text"/>
+      </Menu>
+      <Menu name="menuConnectChat" text="menu.menu67.text">
+        <ActionRef accelerator="actionref.menuItemConnectChatAccept.accelerator" acceleratorKey="actionref.menuItemConnectChatAccept.acceleratorKey" action="connectChatAcceptGlobalAction" name="menuItemConnectChatAccept" text="actionref.menuItem209.text"/>
+        <ActionRef action="connectChatDeclineGlobalAction" name="menuItemConnectChatDecline" text="actionref.menuItem210.text"/>
+        <ActionRef action="connectChatShowScreenGlobalAction" name="menuItemConnectChatShowChatScreen" text="actionref.menuItem211.text"/>
+        <ActionRef accelerator="actionref.menuItemConnectChatDisconnect.accelerator" acceleratorKey="actionref.menuItemConnectChatDisconnect.acceleratorKey" action="connectChatDisconnectGlobalAction" name="menuItemConnectChatDisconnect" text="actionref.menuItem212.text"/>
+      </Menu>
+      <Menu name="menuConnectRouting" text="menu.menu68.text">
+        <ActionRef action="connectRoutingAcceptGlobalAction" name="menuItemConnectRoutingAccept" text="actionref.menuItem207.text"/>
+        <ActionRef action="connectRoutingDeclineGlobalAction" name="menuItemConnectRoutingDecline" text="actionref.menuItem208.text"/>
+      </Menu>
+    </Menu>
+    <Menu name="menuView" text="menu.menu79.text">
+      <ActionRef accelerator="actionref.menuItem292.accelerator" acceleratorKey="actionref.menuItem292.acceleratorKey" action="fileNotifierGlobalAction" name="menuItemViewNotifier" text="actionref.menuItem292.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem293.accelerator" acceleratorKey="actionref.menuItem293.acceleratorKey" action="viewLogCommitmentsPublishedAction" name="menuItemViewCommitmentLogs" text="actionref.menuItem293.text"/>
+      <ActionRef accelerator="actionref.menuItem294.accelerator" acceleratorKey="actionref.menuItem294.acceleratorKey" action="actionViewLogTimeExpensePublishedAction" name="menuItemViewTimeAndExpensesLogs" text="actionref.menuItem294.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem295.accelerator" acceleratorKey="actionref.menuItem295.acceleratorKey" action="viewSummaryPublishedAction" name="menuItemViewSummary" text="actionref.menuItem295.text"/>
+      <Separator/>
+      <ActionRef name="menuItemViewWindowsBrowser" text="actionref.menuItem411.text"/>
+      <ActionRef action="UIF_showLogbrowserAction" name="menuItemViewLogBrowser" text="actionref.menuItem412.text"/>
+      <Separator/>
+      <ActionRef action="UIF_restoreDefaultSettingsAction" name="menuItemViewRestoreDefaultSettings " text="actionref.menuItem413.text"/>
+      <ActionRef accelerator="actionref.menuItemMaxRestoreWorkarea.accelerator" acceleratorKey="actionref.menuItemMaxRestoreWorkarea.acceleratorKey" action="UIF_maximizeRestoreWorkareaAction" name="menuItemViewMaximizeWorkareaOrRestoreWorkarea" text="actionref.menuItem414.text"/>
+      <Menu name="UIF_menuToolbox" text="menu.menu100.text"/>
+      <Menu name="UIF_menuToolbar" text="menu.menu101.text"/>
+      <ActionRef action="UIF_showHideStatusbarAction" name="menuItemViewStatusbar" text="actionref.menuItem417.text"/>
+      <Separator/>
+      <Menu name="UIF_menuWorkarea" text="menu.menu98.text">
+        <ActionRef action="UIF_tileAction" name="menuItemViewWindowTile" text="actionref.menuItem406.text"/>
+        <ActionRef accelerator="actionref.menuItemWindowMaximize.accelerator" acceleratorKey="actionref.menuItemWindowMaximize.acceleratorKey" action="UIF_maximizeAction" name="menuItemViewWindowMaximize" text="actionref.menuItem409.text"/>
+        <ActionRef accelerator="actionref.menuItemWindowRestoreToNormal.accelerator" acceleratorKey="actionref.menuItemWindowRestoreToNormal.acceleratorKey" action="UIF_restoreAction" name="menuItemViewWindowRestoreToNormal" text="actionref.menuItem410.text"/>
+      </Menu>
+      <ActionRef action="launchAIftool" name="menuItem826" text="actionref.menuItem826.text"/>
+    </Menu>
+    <Menu description="menu.menu50.description" name="menuCreate" text="menu.menu50.text">
+      <ActionRef accelerator="actionref.menuItem189.accelerator" acceleratorKey="actionref.menuItem189.acceleratorKey" action="createCIMCustomerInteractionGlobalAction" name="menuItemCreateCustomerInteraction" text="actionref.menuItem189.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem143.accelerator" acceleratorKey="actionref.menuItem143.acceleratorKey" action="createActionItemGlobalAction" name="menuItemCreateActionItem" text="actionref.menuItem143.text"/>
+      <ActionRef accelerator="actionref.menuItem144.accelerator" acceleratorKey="actionref.menuItem144.acceleratorKey" action="createContactGlobalAction" icon="actionref.menuItemCreateContact.icon" name="menuItemCreateContact" text="actionref.menuItem144.text"/>
+      <ActionRef accelerator="actionref.menuItem146.accelerator" acceleratorKey="actionref.menuItem146.acceleratorKey" action="createAddressGlobalAction" name="menuItemCreateAddress" text="actionref.menuItem146.text"/>
+      <ActionRef accelerator="actionref.menuItem147.accelerator" acceleratorKey="actionref.menuItem147.acceleratorKey" action="createLitReqGlobalAction" name="menuItemCreateLiteratureRequest" text="actionref.menuItem147.text"/>
+      <ActionRef accelerator="actionref.menuItem148.accelerator" acceleratorKey="actionref.menuItem148.acceleratorKey" action="createDistListGlobalAction" name="menuItemCreateDistributionList" text="actionref.menuItem148.text"/>
+      <ActionRef action="createCustomerGlobalAction" name="menuItemCreateCustomer" text="actionref.menuItem802.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem154.accelerator" acceleratorKey="actionref.menuItem154.acceleratorKey" action="createDialogueGlobalAction" name="menuItemCreateDialogue" text="actionref.menuItem154.text"/>
+      <Separator/>
+      <Menu name="menuCreateSupport" text="menu.menu69.text">
+        <ActionRef accelerator="actionref.menuItem149.accelerator" acceleratorKey="actionref.menuItem149.acceleratorKey" action="createCaseGlobalAction" name="menuItemCreateCase" text="actionref.menuItem149.text"/>
+        <ActionRef accelerator="actionref.menuItem150.accelerator" acceleratorKey="actionref.menuItem150.acceleratorKey" action="createBillingCaseGlobalAction" name="menuItemCreateBillingCase" text="actionref.menuItem150.text"/>
+        <ActionRef accelerator="actionref.menuItem151.accelerator" acceleratorKey="actionref.menuItem151.acceleratorKey" action="createSubcasePublishedAction" name="menuItemCreateSubcase" text="actionref.menuItem151.text"/>
+        <ActionRef accelerator="actionref.menuItem152.accelerator" acceleratorKey="actionref.menuItem152.acceleratorKey" action="createSolutionGlobalAction" name="menuItemCreateSolution" text="actionref.menuItem152.text"/>
+        <ActionRef accelerator="actionref.menuItem153.accelerator" acceleratorKey="actionref.menuItem153.acceleratorKey" action="createPartRequestPublishedAction" name="menuItemCreateSupportPartRequest" text="actionref.menuItem153.text"/>
+        <ActionRef action="LaunchCreateDeviceCase" name="menuItemDeviceCase" text="actionref.menuItem478.text"/>
+      </Menu>
+      <Menu name="menuCreateBillingManager" text="menu.menu60.text">
+        <ActionRef accelerator="actionref.menuItem188.accelerator" acceleratorKey="actionref.menuItem188.acceleratorKey" action="CreateBillingManagerPmGlobalAction" name="menuItemCreatePayMeans" text="actionref.menuItem188.text"/>
+      </Menu>
+      <Menu name="menuCreateContracts" text="menu.menu82.text">
+        <ActionRef accelerator="actionref.menuItem315.accelerator" acceleratorKey="actionref.menuItem315.acceleratorKey" action="createContractGlobalAction" name="menuItemCreateContract" text="actionref.menuItem315.text"/>
+        <ActionRef accelerator="actionref.menuItem316.accelerator" acceleratorKey="actionref.menuItem316.acceleratorKey" action="createSupportProgramGlobalAction" name="menuItemCreateSupportProgram" text="actionref.menuItem316.text"/>
+        <ActionRef accelerator="actionref.menuItem317.accelerator" acceleratorKey="actionref.menuItem317.acceleratorKey" action="createPriceFactorGlobalAction" name="menuItemCreatePriceFactor" text="actionref.menuItem317.text"/>
+      </Menu>
+    </Menu>
+    <Menu description="menu.menu15.description" name="menuSearch" text="menu.menu15.text">
+      <ActionRef action="identifyCustomerLaunchGlobalAction" description="actionref.menuItemSearchIdentifyCustomer.description" name="menuItemSearchIdentifyCustomer" text="actionref.menuItem451.text"/>
+      <ActionRef accelerator="actionref.menuItem47.accelerator" acceleratorKey="actionref.menuItem47.acceleratorKey" action="searchCustomerInteractionGlobalAction" name="menuItemSearchCustomerInteractions" text="actionref.menuItem47.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem41.accelerator" acceleratorKey="actionref.menuItem41.acceleratorKey" action="searchByIdGlobalAction" name="menuItemSearchSearchByID" text="actionref.menuItem41.text"/>
+      <ActionRef accelerator="actionref.menuItem32.accelerator" acceleratorKey="actionref.menuItem32.acceleratorKey" action="searchActionItemGlobalAction" name="menuItemSearchActionItems" text="actionref.menuItem32.text"/>
+      <ActionRef accelerator="actionref.menuItem33.accelerator" acceleratorKey="actionref.menuItem33.acceleratorKey" action="searchContactGlobalAction" name="menuItemSearchContacts" text="actionref.menuItem33.text"/>
+      <ActionRef accelerator="actionref.menuItem34.accelerator" acceleratorKey="actionref.menuItem34.acceleratorKey" action="searchCustomerGlobalAction" name="menuItemSearchCustomers" text="actionref.menuItem34.text"/>
+      <ActionRef accelerator="actionref.menuItem36.accelerator" acceleratorKey="actionref.menuItem36.acceleratorKey" action="searchAddressGlobalAction" name="menuItemSearchAddresses" text="actionref.menuItem36.text"/>
+      <ActionRef accelerator="actionref.menuItem38.accelerator" acceleratorKey="actionref.menuItem38.acceleratorKey" action="searchRoutingReqGlobalAction" name="menuItemSearchRoutingRequests" text="actionref.menuItem38.text"/>
+      <ActionRef accelerator="actionref.menuItem39.accelerator" acceleratorKey="actionref.menuItem39.acceleratorKey" action="searchDistListGlobalAction" name="menuItemSearchDistributionLists" text="actionref.menuItem39.text"/>
+      <ActionRef accelerator="actionref.menuItem40.accelerator" acceleratorKey="actionref.menuItem40.acceleratorKey" action="SearchBillingManagerSubscriptionGlobalAction" name="menuItemSearchSubscriptions" text="actionref.menuItem40.text"/>
+      <Separator/>
+      <ActionRef accelerator="actionref.menuItem50.accelerator" acceleratorKey="actionref.menuItem50.acceleratorKey" action="searchFullTextGlobalAction" name="menuItemSearchFullTextSearch" text="actionref.menuItem50.text"/>
+      <Separator/>
+      <Menu name="menuSearchCommunications" text="menu.menu104.text">
+        <ActionRef accelerator="actionref.menuItem37.accelerator" acceleratorKey="actionref.menuItem37.acceleratorKey" action="searchLitReqGlobalAction" name="menuItemSearchCommunicationsLiteratureRequests" text="actionref.menuItem37.text"/>
+        <Separator/>
+        <ActionRef accelerator="actionref.menuItem48.accelerator" acceleratorKey="actionref.menuItem48.acceleratorKey" action="searchDialogueGlobalAction" name="menuItemSearchCommunicationsDialogues" text="actionref.menuItem48.text"/>
+        <ActionRef accelerator="actionref.menuItem49.accelerator" acceleratorKey="actionref.menuItem49.acceleratorKey" action="searchTemplateGlobalAction" name="menuItemSearchCommunicationsCommunicationTemplates" text="actionref.menuItem49.text"/>
+      </Menu>
+      <Menu name="menuSearchProcessesAndScripts" text="menu.menu105.text">
+        <ActionRef accelerator="actionref.menuItem51.accelerator" acceleratorKey="actionref.menuItem51.acceleratorKey" action="LaunchProcessInstance" name="menuItemSearchProcessesAndScriptsProcessInstances" text="actionref.menuItem51.text"/>
+        <ActionRef accelerator="actionref.menuItem52.accelerator" acceleratorKey="actionref.menuItem52.acceleratorKey" action="searchLegacyProcessInstanceGlobalAction" name="menuItemSearchProcessesAndScriptsLegacyProcessInstances" text="actionref.menuItem52.text"/>
+        <Separator/>
+        <ActionRef accelerator="actionref.menuItem53.accelerator" acceleratorKey="actionref.menuItem53.acceleratorKey" action="searchScriptHistoryGlobalAction" name="menuItemSearchProcessesAndScriptsScriptHistories" text="actionref.menuItem53.text"/>
+        <ActionRef action="searchLegacyScriptHistoryGlobalAction" name="menuItemSearchProcessesAndScriptsLegacyScriptHistories" text="actionref.menuItem322.text"/>
+      </Menu>
+      <Separator/>
+      <Menu name="menuSearchSupport" text="menu.menu26.text">
+        <ActionRef accelerator="actionref.menuItem42.accelerator" acceleratorKey="actionref.menuItem42.acceleratorKey" action="searchCaseGlobalAction" name="menuItemSearchCases" text="actionref.menuItem42.text"/>
+        <ActionRef accelerator="actionref.menuItem43.accelerator" acceleratorKey="actionref.menuItem43.acceleratorKey" action="searchSubcaseGlobalAction" name="menuItemSearchSubcases" text="actionref.menuItem43.text"/>
+        <ActionRef accelerator="actionref.menuItem44.accelerator" acceleratorKey="actionref.menuItem44.acceleratorKey" action="searchSolutionGlobalAction" name="menuItemSearchSolutions" text="actionref.menuItem44.text"/>
+        <ActionRef accelerator="actionref.menuItem45.accelerator" acceleratorKey="actionref.menuItem45.acceleratorKey" action="searchPartRequestPublishedAction" name="menuItemSearchSupportPartRequests" text="actionref.menuItem45.text"/>
+        <ActionRef accelerator="actionref.menuItem46.accelerator" acceleratorKey="actionref.menuItem46.acceleratorKey" action="searchServiceInterruptionGlobalAction" name="menuItemSearchServiceInterruptions" text="actionref.menuItem46.text"/>
+        <Separator/>
+        <ActionRef name="menuItemSearchSupportContracts" text="actionref.menuItem371.text"/>
+      </Menu>
+      <Menu name="menuSearchBillingManager" text="menu.menu24.text">
+        <ActionRef accelerator="actionref.menuItem79.accelerator" acceleratorKey="actionref.menuItem79.acceleratorKey" action="SearchBillingManagerBarGlobalAction" name="menuItemSearchBillingArrangements" text="actionref.menuItem79.text"/>
+        <ActionRef accelerator="actionref.menuItem80.accelerator" acceleratorKey="actionref.menuItem80.acceleratorKey" action="SearchBillingManagerFaGlobalAction" name="menuItemSearchFinancialAccounts" text="actionref.menuItem80.text"/>
+        <ActionRef accelerator="actionref.menuItem82.accelerator" acceleratorKey="actionref.menuItem82.acceleratorKey" action="SearchBillingManagerPmGlobalAction" name="menuItemSearchPayMeans" text="actionref.menuItem82.text"/>
+      </Menu>
+      <Menu name="menuSearchContracts" text="menu.menu87.text">
+        <ActionRef accelerator="actionref.menuItem333.accelerator" acceleratorKey="actionref.menuItem333.acceleratorKey" action="searchContractGlobalAction" name="menuItemSearchContracts" text="actionref.menuItem333.text"/>
+        <ActionRef accelerator="actionref.menuItem334.accelerator" acceleratorKey="actionref.menuItem334.acceleratorKey" action="searchSupportProgramGlobalAction" name="menuItemSearchSupportPrograms" text="actionref.menuItem334.text"/>
+        <ActionRef accelerator="actionref.menuItem335.accelerator" acceleratorKey="actionref.menuItem335.acceleratorKey" action="searchPriceFactorGlobalAction" name="menuItemSearchPriceFactors" text="actionref.menuItem335.text"/>
+      </Menu>
+      <Menu description="menu.menu19.description" name="menuSearchAdministration" text="menu.menu19.text">
+        <ActionRef accelerator="actionref.menuItem71.accelerator" acceleratorKey="actionref.menuItem71.acceleratorKey" action="viewAuditTrailAction" name="menuItemSearchViewAuditTrails" text="actionref.menuItem71.text"/>
+        <Separator/>
+        <Menu name="menuSearchAdministrationResource" text="menu.menu106.text">
+          <ActionRef accelerator="actionref.menuItem54.accelerator" acceleratorKey="actionref.menuItem54.acceleratorKey" action="searchEmployeeAction" description="actionref.menuItem54.description" icon="actionref.menuItem54.icon" name="menuItemSearchResourceEmployees" text="actionref.menuItem54.text"/>
+          <ActionRef accelerator="actionref.menuItem56.accelerator" acceleratorKey="actionref.menuItem56.acceleratorKey" action="searchQueueAction" name="menuItemSearchResourceQueues" text="actionref.menuItem56.text"/>
+          <ActionRef action="LaunchWebUser" name="menuItemSearchResourceWebUsers" text="actionref.menuItem378.text"/>
+          <ActionRef accelerator="actionref.menuItem55.accelerator" acceleratorKey="actionref.menuItem55.acceleratorKey" action="searchTeamAction" name="menuItemSearchResourceTeams" text="actionref.menuItem55.text"/>
+          <ActionRef accelerator="actionref.menuItem66.accelerator" acceleratorKey="actionref.menuItem66.acceleratorKey" action="searchHolidayScheduleAction" name="menuItemSearchResourceHolidaySchedules" text="actionref.menuItem66.text"/>
+          <ActionRef accelerator="actionref.menuItem67.accelerator" acceleratorKey="actionref.menuItem67.acceleratorKey" action="searchBusinessCalendarGlobalAction" name="menuItemSearchResourceBusinessCalendars" text="actionref.menuItem67.text"/>
+          <ActionRef accelerator="actionref.menuItem75.accelerator" acceleratorKey="actionref.menuItem75.acceleratorKey" action="BE_skills" name="menuItemSearchResourceSkills" text="actionref.menuItem75.text"/>
+        </Menu>
+        <Menu name="menuSearchAdministrationData" text="menu.menu96.text">
+          <ActionRef action="setupChoicelistsAction" name="menuItemSearchDataChoicelists" text="actionref.menuItem376.text"/>
+          <ActionRef action="searchFlexAttrGlobalAction" name="menuItemSearchDataFlexibleAttributeDefinitions" text="actionref.menuItem380.text"/>
+          <ActionRef action="searchFlexAttrTmplGlobalAction" name="menuItemSearchDataFlexibleAttributeTemplates" text="actionref.menuItem381.text"/>
+          <ActionRef action="SearchCreditClass" name="menuItemSearchDataCreditClasses" text="actionref.menuItem382.text"/>
+          <ActionRef accelerator="actionref.menuItem70.accelerator" acceleratorKey="actionref.menuItem70.acceleratorKey" action="SearchCommunicationMediumAction" name="menuItemSearchDataCommunicationMediums" text="actionref.menuItem70.text"/>
+        </Menu>
+        <Menu name="menuSearchAdministrationProduct" text="menu.menu23.text">
+          <ActionRef action="BE_idSearchPart" name="menuItemSearchProductPartNumbers" text="actionref.menuItem383.text"/>
+          <ActionRef action="BE_idSearchCostPriceSchedule" name="menuItemSearchProductCostPriceSchedules" text="actionref.menuItem384.text"/>
+          <ActionRef action="BE_idSearchPartDomain" name="menuItemSearchProductDomains" text="actionref.menuItem385.text"/>
+          <ActionRef accelerator="actionref.menuItem78.accelerator" acceleratorKey="actionref.menuItem78.acceleratorKey" action="searchCatalogAction" name="menuItemSearchProductCatalogs" text="actionref.menuItem78.text"/>
+          <ActionRef action="BE_idPriceParts" name="menuItemSearchProductPriceParts" text="actionref.menuItem386.text"/>
+          <ActionRef action="searchCUGLaunch" name="menuItemClosedUserGroups." text="actionref.menuItem804.text"/>
+        </Menu>
+        <Menu name="menuSearchAdministrationRegionalSetting" text="menu.menu20.text">
+          <ActionRef accelerator="actionref.menuItem72.accelerator" acceleratorKey="actionref.menuItem72.acceleratorKey" action="SearchCountry" name="menuItemSearchRegionalSettingCountries" text="actionref.menuItem72.text"/>
+          <ActionRef accelerator="actionref.menuItem73.accelerator" acceleratorKey="actionref.menuItem73.acceleratorKey" action="searchCurrencyAction" name="menuItemSearchRegionalSettingCurrencies" text="actionref.menuItem73.text"/>
+          <ActionRef accelerator="actionref.menuItem74.accelerator" acceleratorKey="actionref.menuItem74.acceleratorKey" action="SearchTimeZone" name="menuItemSearchRegionalSettingTimeZones" text="actionref.menuItem74.text"/>
+        </Menu>
+        <Separator/>
+        <Menu name="menuSearchAdministrationSecurity" text="menu.menu97.text">
+          <ActionRef accelerator="actionref.menuItem58.accelerator" acceleratorKey="actionref.menuItem58.acceleratorKey" action="searchControlledObjectAction" name="menuItemSearchSecurityControlledObjects" text="actionref.menuItem58.text"/>
+          <ActionRef action="BE_global_roles" name="menuItemSearchSecurityGlobalRoles" text="actionref.menuItem387.text"/>
+          <ActionRef accelerator="actionref.menuItem59.accelerator" acceleratorKey="actionref.menuItem59.acceleratorKey" action="searchTeamRoleMatrix" name="menuItemSearchSecurityTeamRoleMatrixes" text="actionref.menuItem59.text"/>
+          <ActionRef accelerator="actionref.menuItem60.accelerator" acceleratorKey="actionref.menuItem60.acceleratorKey" action="searchUserRoleMatrix" name="menuItemSearchSecurityUserRoleMatrixes" text="actionref.menuItem60.text"/>
+          <ActionRef action="searchPageClassAction" name="menuItemSearchSecurityPageClasses" text="actionref.menuItem388.text"/>
+        </Menu>
+        <Separator/>
+        <Menu name="menuSearchAdministrationConfiguration" text="menu.menu22.text">
+          <ActionRef accelerator="actionref.menuItem77.accelerator" acceleratorKey="actionref.menuItem77.acceleratorKey" action="searchConfigBusinessRuleGlobalAction" name="menuItemSearchConfigurationBusinessRules" text="actionref.menuItem77.text"/>
+          <ActionRef accelerator="actionref.menuItem76.accelerator" acceleratorKey="actionref.menuItem76.acceleratorKey" action="searchConfigItemsAction" name="menuItemSearchConfigurationConfigurationItems" text="actionref.menuItem76.text"/>
+          <ActionRef action="BE_idNamedExpression" name="menuItemSearchConfigurationNamedExpressions" text="actionref.menuItem389.text"/>
+          <ActionRef action="BE_numberingschemes_search" name="menuItemSearchConfigurationNumberSchemes" text="actionref.menuItem390.text"/>
+          <ActionRef name="menuItemSearchConfigurationPartActions" text="actionref.menuItem391.text"/>
+          <ActionRef action="showRulePropertiesList" name="menuItemSearchConfigurationRuleProperties" text="actionref.menuItem392.text"/>
+          <ActionRef action="searchTransitionFieldAction" name="menuItemSearchConfigurationTransitionFields" text="actionref.menuItem393.text"/>
+          <ActionRef action="searchTransitionMapAction" name="menuItemSearchConfigurationTransitionMaps" text="actionref.menuItem394.text"/>
+          <ActionRef action="searchAuditTrailAction" name="menuItemSearchConfigurationAuditTrails" text="actionref.menuItem395.text"/>
+          <ActionRef action="searchOutboundCommunicationTemplateAction" name="menuItemSearchOutboundCommTemplate" text="actionref.menuItem805.text"/>
+        </Menu>
+        <Separator/>
+        <Menu name="menuSearchAdministrationSupportAdministration" text="menu.menu108.text">
+          <ActionRef accelerator="actionref.menuItem65.accelerator" acceleratorKey="actionref.menuItem65.acceleratorKey" action="SearchJeopardyGroupAction" name="menuItemSearchSupportAdministrationJeopardyGroups" text="actionref.menuItem65.text"/>
+          <ActionRef action="BE_milestonesBE" name="menuItemSearchSupportAdministrationSupportMilestones" text="actionref.menuItem379.text"/>
+          <ActionRef action="searchEMContractGlobalAction" name="Contracts" text="actionref.menuItem454.text"/>
+          <ActionRef action="searchEMSupportProgramGlobalAction" name="Support Programs" text="actionref.menuItem455.text"/>
+        </Menu>
+        <Menu name="menuSearchAdministrationSalesAdministration" text="menu.menu109.text">
+          <ActionRef accelerator="actionref.menuItem57.accelerator" acceleratorKey="actionref.menuItem57.acceleratorKey" action="LaunchLeadFolder" name="menuItemSearchSalesAdministrationLeadFolders" text="actionref.menuItem57.text"/>
+          <ActionRef accelerator="actionref.menuItem61.accelerator" acceleratorKey="actionref.menuItem61.acceleratorKey" action="searchLeadStageAction" name="menuItemSearchSalesAdministrationLeadStages" text="actionref.menuItem61.text"/>
+          <ActionRef accelerator="actionref.menuItem62.accelerator" acceleratorKey="actionref.menuItem62.acceleratorKey" action="searchSalesProcessGlobalAction" name="menuItemSearchSalesAdministrationSalesProcesses" text="actionref.menuItem62.text"/>
+          <ActionRef accelerator="actionref.menuItem63.accelerator" acceleratorKey="actionref.menuItem63.acceleratorKey" action="searchSalesStageGlobalAction" name="menuItemSearchSalesAdministrationSalesStages" text="actionref.menuItem63.text"/>
+        </Menu>
+        <Menu name="menuSearchAdministrationAutomation" text="menu.menu107.text">
+          <ActionRef accelerator="actionref.menuItem68.accelerator" acceleratorKey="actionref.menuItem68.acceleratorKey" action="searchTaskDefinitionGlobalAction" name="menuItemSearchAutomationTaskDefinitions" text="actionref.menuItem68.text"/>
+          <ActionRef accelerator="actionref.menuItem69.accelerator" acceleratorKey="actionref.menuItem69.acceleratorKey" action="searchTaskSetGlobalAction" name="menuItemSearchAutomationTaskSetDefinitions" text="actionref.menuItem69.text"/>
+          <ActionRef action="actionPlayScriptGlobalAction" name="menuItemSearchAutomationScripts" text="actionref.menuItem374.text"/>
+          <ActionRef action="searchBackgroundAction" name="menuItemSearchAutomationBackgroundActions" text="actionref.menuItem375.text"/>
+        </Menu>
+      </Menu>
+      <Menu name="menuSearchOrdering" text="menu.menu113.text">
+        <ActionRef action="SearchAssignedProductGlobalAction" name="menuItemSearchAssignedProducts" text="actionref.menuItem445.text"/>
+        <ActionRef action="LaunchSearchOrders" name="menuItemSearchOrders" text="actionref.menuItem446.text"/>
+        <ActionRef action="SearchOrderPoolGlobalAction" name="menuItemSearchOrderPool" text="actionref.menuItem447.text"/>
+        <ActionRef action="SearchMassRequestGlobalAction" name="menuItemSearchMassRequest" text="actionref.menuItem821.text"/>
+      </Menu>
+    </Menu>
+    <Menu name="menuWorkflow" text="menu.menu10.text">
+      <ActionRef accelerator="actionref.menuItem6.accelerator" acceleratorKey="actionref.menuItem6.acceleratorKey" action="workflowAcceptPublishedAction" name="menuItemWorkflowAccept" text="actionref.menuItem6.text"/>
+      <ActionRef accelerator="actionref.menuItem7.accelerator" acceleratorKey="actionref.menuItem7.acceleratorKey" action="workflowDispatchPublishedAction" name="menuItemWorkflowDispatch" text="actionref.menuItem7.text"/>
+      <ActionRef accelerator="actionref.menuItem8.accelerator" acceleratorKey="actionref.menuItem8.acceleratorKey" action="workflowAssignPublishedAction" name="menuItemWorkflowAssign" text="actionref.menuItem8.text"/>
+      <ActionRef accelerator="actionref.menuItem9.accelerator" acceleratorKey="actionref.menuItem9.acceleratorKey" action="workflowMovePublishedAction" name="menuItemWorkflowMove" text="actionref.menuItem9.text"/>
+      <ActionRef accelerator="actionref.menuItem10.accelerator" acceleratorKey="actionref.menuItem10.acceleratorKey" action="workflowReturnPublishedAction" name="menuItemWorkflowReturn" text="actionref.menuItem10.text"/>
+      <ActionRef accelerator="actionref.menuItem11.accelerator" acceleratorKey="actionref.menuItem11.acceleratorKey" action="workflowForwardPublishedAction" name="menuItemWorkflowForward" text="actionref.menuItem11.text"/>
+      <ActionRef accelerator="actionref.menuItem12.accelerator" acceleratorKey="actionref.menuItem12.acceleratorKey" action="workflowRetrieveGlobalAction" name="menuItemWorkflowRetrieve" text="actionref.menuItem12.text"/>
+      <ActionRef action="workflowMangageWorkFoldersGlobalAction" name="menuItemWorkflowManageWorkFolders" text="actionref.menuItem340.text"/>
+    </Menu>
+    <Menu name="menuAction" text="menu.menu40.text">
+      <ActionRef accelerator="actionref.menuItem131.accelerator" acceleratorKey="actionref.menuItem131.acceleratorKey" action="actionPlayScriptGlobalAction" name="menuItemActionsPlayScript" text="actionref.menuItem131.text"/>
+      <Menu name="menuActionsLog" text="menu.menu89.text">
+        <ActionRef accelerator="actionref.menuItem341.accelerator" acceleratorKey="actionref.menuItem341.acceleratorKey" action="logPhoneCallPublishedAction" icon="actionref.menuItemActionsLogPhoneCall.icon" name="menuItemActionsLogPhoneCall" text="actionref.menuItem341.text"/>
+        <ActionRef accelerator="actionref.menuItem342.accelerator" acceleratorKey="actionref.menuItem342.acceleratorKey" action="logNotesPublishedAction" icon="actionref.menuItemActionsLogNotes.icon" name="menuItemActionsLogNotes" text="actionref.menuItem342.text"/>
+        <ActionRef accelerator="actionref.menuItem343.accelerator" acceleratorKey="actionref.menuItem343.acceleratorKey" action="logEmailPublishedAction" icon="actionref.menuItemActionsLogEmail.icon" name="menuItemActionsLogEmail" text="actionref.menuItem343.text"/>
+        <Separator/>
+        <ActionRef accelerator="actionref.menuItem344.accelerator" acceleratorKey="actionref.menuItem344.acceleratorKey" action="logCommitmentPublishedAction" name="menuItemActionsLogCommitment" text="actionref.menuItem344.text"/>
+        <ActionRef accelerator="actionref.menuItem345.accelerator" acceleratorKey="actionref.menuItem345.acceleratorKey" action="logResearchPublishedAction" name="menuItemActionsLogResearch" text="actionref.menuItem345.text"/>
+        <Separator/>
+        <ActionRef accelerator="actionref.menuItem346.accelerator" acceleratorKey="actionref.menuItem346.acceleratorKey" action="actionLogTimeExpensePublishedAction" name="menuItemActionsLogTimeAndExpenses" text="actionref.menuItem346.text"/>
+        <ActionRef accelerator="actionref.menuItem347.accelerator" acceleratorKey="actionref.menuItem347.acceleratorKey" action="actionLogPartsUsedGlobalAction" icon="actionref.menuItemActionsLogPartsUsed.icon" name="menuItemActionsLogPartsUsed" text="actionref.menuItem347.text"/>
+        <ActionRef accelerator="actionref.menuItem348.accelerator" acceleratorKey="actionref.menuItem348.acceleratorKey" action="actionLogServiceInterruption" name="menuItemActionsLogServiceInterruption" text="actionref.menuItem348.text"/>
+      </Menu>
+      <Separator/>
+      <Menu name="menuActionsSupport" text="menu.menu70.text">
+        <ActionRef accelerator="actionref.menuItem126.accelerator" acceleratorKey="actionref.menuItem126.acceleratorKey" action="actionsClosePublishedAction" name="menuItemActionsCloseCaseOrSubcase" text="actionref.menuItem126.text"/>
+        <ActionRef accelerator="actionref.menuItem127.accelerator" acceleratorKey="actionref.menuItem127.acceleratorKey" action="actionsChangeStatusPublishedAction" name="menuItemActionsChangeCaseStatus" text="actionref.menuItem127.text"/>
+        <ActionRef accelerator="actionref.menuItem128.accelerator" acceleratorKey="actionref.menuItem128.acceleratorKey" action="actionsReopenPublishedAction" name="menuItemActionsReopenCase" text="actionref.menuItem128.text"/>
+        <ActionRef accelerator="actionref.menuItem130.accelerator" acceleratorKey="actionref.menuItem130.acceleratorKey" action="dfePublishedAction" name="menuItemActionsDispatchFieldEngineer" text="actionref.menuItem130.text"/>
+      </Menu>
+      <Menu name="menuActionsBillingManager" text="menu.menu45.text">
+        <ActionRef action="ActionsPayBillGlobalAction" name="menuItemActionsPayBill" text="actionref.menuItem243.text"/>
+        <ActionRef action="ActionsViewBillGlobalAction" name="menuItemActionsViewBill" text="actionref.menuItem244.text"/>
+        <ActionRef action="ActionsViewStatementGlobalAction" name="menuItemActionsViewStatement" text="actionref.menuItem245.text"/>
+        <ActionRef action="ActionsViewBalanceGlobalAction" name="menuItemActionsViewBalance" text="actionref.menuItem246.text"/>
+        <ActionRef action="ActionsSearchPaymentGlobalAction" name="menuItemActionsSearchPayment" text="actionref.menuItem822.text"/>
+      </Menu>
+      <Menu name="menuActionsContracts" text="menu.menu93.text">
+        <ActionRef accelerator="actionref.menuItem359.accelerator" acceleratorKey="actionref.menuItem359.acceleratorKey" action="actionsConvertContractPublishedAction" name="menuItemActionsConvertContract" text="actionref.menuItem359.text"/>
+        <ActionRef accelerator="actionref.menuItem360.accelerator" acceleratorKey="actionref.menuItem360.acceleratorKey" action="actionsMergeContractPublishedAction" name="menuItemActionsMergeContract" text="actionref.menuItem360.text"/>
+        <ActionRef accelerator="actionref.menuItem361.accelerator" acceleratorKey="actionref.menuItem361.acceleratorKey" action="actionsRenewContractPublishedAction" name="menuItemActionsRenewContract" text="actionref.menuItem361.text"/>
+        <ActionRef accelerator="actionref.menuItem362.accelerator" acceleratorKey="actionref.menuItem362.acceleratorKey" action="actionsRejectQuotePublishedAction" name="menuItemActionsRejectQuote" text="actionref.menuItem362.text"/>
+        <ActionRef action="actionsCloseContractPublishedAction" name="menuItemActionsCloseContract" text="actionref.menuItem403.text"/>
+      </Menu>
+      <Menu name="menuActionsAdministration" text="menu.menu44.text">
+        <ActionRef action="actionUserMembershipManagerGlobalAction" name="menuItemActionsUserMembershipManager" text="actionref.menuItem248.text"/>
+        <ActionRef action="actionRoleMatrixLogPublishedAction" name="menuItemActionsRoleMatrixLog" text="actionref.menuItem404.text"/>
+        <ActionRef action="LaunchAuthorizationAuditor" name="menuItemActionsAuthorizationAuditor" text="actionref.menuItem251.text"/>
+        <ActionRef action="actionConfigureTypesGlobalAction" name="menuItemActionsConfigureTypes" text="actionref.menuItem428.text"/>
+        <ActionRef action="actionsEMRenewContractPublishedAction" name="menuItemEMRenewContract" text="actionref.menuItem456.text"/>
+        <ActionRef action="actionsEMCloseContractPublishedAction" name="menuItemEMCloseContract" text="actionref.menuItem457.text"/>
+        <Separator/>
+        <ActionRef action="actionScriptTesterGlobalAction" name="menuItemActionsScriptTester" text="actionref.menuItem252.text"/>
+      </Menu>
+      <Menu name="menuActionsOrdering" text="menu.menu111.text">
+        <ActionRef action="actionsOrderingProvideGlobalAction" name="menuItemActionsProvide" text="actionref.menuItem429.text"/>
+        <Separator/>
+        <ActionRef action="ActionsOrderingMassProvideGlobalAction" name="menuItemMassRequest" text="actionref.menuItem806.text"/>
+        <ActionRef action="ActionsChangePublishedAction" name="menuItemActionsChange" text="actionref.menuItem430.text"/>
+        <ActionRef action="ActionsSuspendPublishedAction" name="menuItemActionsSuspend" text="actionref.menuItem431.text"/>
+        <ActionRef action="ActionsResumePublishedAction" name="menuItemActionsResume" text="actionref.menuItem432.text"/>
+        <ActionRef action="ActionsMovePublishedAction" name="menuItemActionsMove" text="actionref.menuItem460.text"/>
+        <ActionRef action="ActionsCeasePublishedAction" name="menuItemActionsCease" text="actionref.menuItem433.text"/>
+        <Menu name="menuActionsCollection" text="menu.menu401.text">
+          <ActionRef accelerator="actionref.menuItem807.accelerator" acceleratorKey="actionref.menuItem807.acceleratorKey" action="ActionsCollectionSuspendPublishedAction" name="menuItemActionsCollectionSuspend" text="actionref.menuItem807.text"/>
+          <ActionRef accelerator="actionref.menuItem808.accelerator" acceleratorKey="actionref.menuItem808.acceleratorKey" action="ActionsCollectionResumePublishedAction" name="menuItemActionsCollectionResume" text="actionref.menuItem808.text"/>
+          <ActionRef accelerator="actionref.menuItem809.accelerator" acceleratorKey="actionref.menuItem809.acceleratorKey" action="ActionsCollectionChangePublishedAction" name="menuItemActionsCollectionChange" text="actionref.menuItem809.text"/>
+          <ActionRef accelerator="actionref.menuItem810.accelerator" acceleratorKey="actionref.menuItem810.acceleratorKey" action="ActionsCollectionCeasePublishedAction" name="menuItemActionsCollectionCease" text="actionref.menuItem810.text"/>
+        </Menu>
+        <ActionRef action="ActionsReestablishPublishedAction" name="menuItemActionsReestablish" text="actionref.menuItem461.text"/>
+        <ActionRef action="ActionsReplaceOfferPublishedAction" name="menuItemActionsReplaceOffer" text="actionref.menuItem462.text"/>
+        <ActionRef acceleratorKey="actionref.menuItemActionsAddProductToOffer.acceleratorKey" action="ActionsAddProductToOfferPublishedAction" name="menuItemActionsAddProductToOffer" text="actionref.menuItem448.text"/>
+        <ActionRef action="ActionsCeaseOfferPublishedAction" name="menuItemActionsCeaseOffer" text="actionref.menuItem464.text"/>
+        <ActionRef action="ActionsChangeOwnershipGlobalAction" name="menuItemActionsChangeOwnership" text="actionref.menuItem465.text"/>
+        <Separator/>
+        <ActionRef action="ActionsAmendPublishedAction" name="menuItemActionsAmend" text="actionref.menuItem434.text"/>
+        <ActionRef action="ActionsWithdrawAmendPublishedAction" name="menuItemActionsWithdrawAmend" text="actionref.menuItem435.text"/>
+        <ActionRef action="ActionsCancelPublishedAction" name="menuItemActionsCancel" text="actionref.menuItem449.text"/>
+        <ActionRef action="ActionsCancelOfferPublishedAction" name="menuItemActionsCancelOffer" text="actionref.menuItem471.text"/>
+        <ActionRef action="ActionsCancelReplaceOfferPublishedAction" name="menuItemActionsCancelReplaceOffer" text="actionref.menuItem472.text"/>
+        <ActionRef action="ActionsWithdrawCancelPublishedAction" name="menuItemActionsWidthdrawCancel" text="actionref.menuItem450.text"/>
+        <ActionRef action="ActionsDiscontinuePublishedAction" name="menuItemDiscontinue" text="actionref.menuItem436.text"/>
+        <ActionRef action="ActionsRelinquishPublishedAction" name="menuItemActionsRelinquish" text="actionref.menuItem437.text"/>
+        <ActionRef action="ActionsTakeOverPublishedAction" name="menuItemActionsTakeOver" text="actionref.menuItem438.text"/>
+        <Separator/>
+        <Menu name="menuActionsCreateRetroactiveOrder" text="menu.menu112.text">
+          <ActionRef action="actionsOrderingRetroactiveProvideGlobalAction" name="menuItemActionsOrderingCreateRetroactiveOrderProvide" text="actionref.menuItem440.text"/>
+          <Separator/>
+          <ActionRef action="ActionsRetroactiveChangePublishedAction" name="menuItemActionsCreateRetroactiveOrderChange" text="actionref.menuItem441.text"/>
+          <ActionRef action="ActionsRetroactiveSuspendPublishedAction" name="menuItemActionsCreateRetroactiveOrderSuspend" text="actionref.menuItem442.text"/>
+          <ActionRef action="ActionsRetroactiveResumePublishedAction" name="menuItemActionsOrderingCreateRetroactiveOrderResume" text="actionref.menuItem443.text"/>
+          <ActionRef action="ActionsRetroactiveMovePublishedAction" name="menuItemActionsRetroactiveMove" text="actionref.menuItem466.text"/>
+          <ActionRef action="ActionsRetroactiveCeasePublishedAction" name="menuItemActionsOrderingCreateRetroactiveOrderCease" text="actionref.menuItem444.text"/>
+          <ActionRef action="ActionsRetroactiveReestablishPublishedAction" name="menuItemActionsRetroactiveReestablish" text="actionref.menuItem467.text"/>
+          <ActionRef acceleratorKey="actionref.menuItem468.acceleratorKey" action="ActionsRetroactiveReplaceOfferPublishedAction" name="menuItemActionsRetroactiveReplaceOffer" text="actionref.menuItem468.text"/>
+          <ActionRef action="ActionsRetroactiveAddProductToOfferPublishedAction" name="menuItemActionsRetroactiveAddProductToOffer" text="actionref.menuItem469.text"/>
+          <ActionRef action="ActionsRetroactiveChangeOwnershipGlobalAction" name="menuItemActionsRetroactiveChangeOwnership" text="actionref.menuItem470.text"/>
+        </Menu>
+        <ActionRef action="ActionsResumeNegotiationPublishedAction" name="menuItemActionsResumeNegotiation" text="actionref.menuItem439.text"/>
+        <ActionRef action="ActionsAddProductToOfferPublishedAction" name="menuItemActionsAddProductToOffe" text="actionref.menuItem812.text"/>
+        <Separator/>
+        <ActionRef action="ActionsSendNotificationPublishedAction" name="menuSendNotification" text="actionref.menuItem813.text"/>
+        <Separator/>
+        <Menu name="menuActionsProposal" text="menu.menu402.text">
+          <ActionRef accelerator="actionref.menuItem814.accelerator" acceleratorKey="actionref.menuItem814.acceleratorKey" action="actionsOrderingProposalProvideGlobalAction" name="menuItemActionsOrderingProposalProvide" text="actionref.menuItem814.text"/>
+          <ActionRef accelerator="actionref.menuItem815.accelerator" acceleratorKey="actionref.menuItem815.acceleratorKey" action="ActionsChangeModeGlobalAction" name="menuItemActionsOrderingProposalChangetoDelivery" text="actionref.menuItem815.text"/>
+        </Menu>
+      </Menu>
+      <Menu name="menuCreateMassOperation" text="menu.menu403.text">
+        <ActionRef action="ActionChangeStatusGlobalAction" name="menuItemChangeStatus" text="actionref.menuItem817.text"/>
+        <ActionRef action="ActionChangeOwnershipGlobalAction" name="menuItemChangeOwnerShip" text="actionref.menuItem818.text"/>
+        <ActionRef action="ActionReplaceOfferGlobalAction" name="menuItemReplaceOffer" text="actionref.menuItem819.text"/>
+        <ActionRef action="ActionChangeConfigurationGlobalAction" name="menuItemChangeConfiguration" text="actionref.menuItem820.text"/>
+      </Menu>
+    </Menu>
+    <Menu name="menuHelp" text="menu.menu11.text">
+      <ActionRef accelerator="actionref.menuItem13.accelerator" acceleratorKey="actionref.menuItem13.acceleratorKey" action="UIF_showHelpAction" name="menuItemHelpAboutCRMHelp" text="actionref.menuItem13.text"/>
+      <ActionRef accelerator="actionref.menuItem14.accelerator" acceleratorKey="actionref.menuItem14.acceleratorKey" action="helpAboutAmdocsCRMGlobalAction" name="menuItemHelpAboutAmdocsCRM" text="actionref.menuItem14.text"/>
+      <Separator/>
+      <ActionRef action="LaunchSmartInspector" name="SmartInspector" text="actionref.menuItem816.text"/>
+      <Menu name="menuSimulators" text="menu.menu404.text">
+        <ActionRef action="LaunchActionCtiClient" name="CtiTestClient" text="actionref.menuItem823.text"/>
+        <ActionRef action="LaunchCreateBillingProfile" name="menuItemCreateBillingProfileSimulator" text="actionref.menuItem824.text"/>
+        <ActionRef action="LaunchCreateSubscriber" name="menuItemCreateSubscriber" text="actionref.menuItem825.text"/>
+      </Menu>
+    </Menu>
+  </MenuBar>
+  <ToolBarPane>
+    <ToolBarForm logicalFormName="com.amdocs.crm.mediacontroller.MediaToolBarForm" visible="true"/>
+    <ToolBarForm logicalFormName="com.amdocs.crm.cim.findcaller.FindCallerToolbar" visible="true"/>
+    <ToolBarForm logicalFormName="com.amdocs.crm.cim.customerinfo.EmptyToolbar" visible="true"/>
+  </ToolBarPane>
+  <ToolBoxPane>
+    <ToolBoxForm logicalFormName="com.amdocs.crm.cim.desktop.InteractionToolbox" state="open"/>
+    <ToolBoxForm logicalFormName="com.amdocs.crm.workspace.CimWFToolbox" state="open"/>
+    <ToolBoxForm logicalFormName="com.amdocs.crm.workspace.OpenWindows" state="open"/>
+    <ToolBoxForm launchAction="launchAccountHierarchyToolbox" state="stacked"/>
+    <ToolBoxForm launchAction="orderToolboxFormLaunchGlobalAction" state="open"/>
+    <ToolBoxForm logicalFormName="com.crmphd.crm.cim.desktop.X3LaunchMapToolbox" state="hidden"/>
+  </ToolBoxPane>
+  <GlobalForms>
+    <FormRef logicalFormName="com.amdocs.crm.common.contextmanager.ContextManagerUtilityForm"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.CimGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.CrmMenuActionsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.CimMenuActionsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.SupportMenuActionsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.AdminGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.mediacontroller.MediaControllerForm"/>
+    <FormRef logicalFormName="com.amdocs.crm.routing.RoutingManager"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.SalesMenuActionsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.DesktopLinkingGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.ChangeManagerMenuActionsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.QualityMenuActionsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.BillingCareGlobal"/>
+    <FormRef launchAction="orderGlobalFormLaunchGlobalAction"/>
+    <FormRef logicalFormName="com.amdocs.crm.logistics.LogisticsGlobalUtility"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.InventoryManagerMenuActionsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.LogisticsValueMapsGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.ContractMenuActionsGlobal"/>
+    <FormRef launchAction="orderGlobalUtilLaunchAction"/>
+    <FormRef launchAction="orderGlobalCacheManagerLaunchAction"/>
+    <FormRef logicalFormName="com.amdocs.crm.workspace.DeviceCareGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.cim.customerinfo.CustomerInfoBulkGlobal"/>
+    <FormRef logicalFormName="com.amdocs.crm.common.GlobalUtility"/>
+  </GlobalForms>
+  <DefaultForms>
+    <FormRef logicalFormName="com.crmimpl.tool.AifAnalyserForm"/>
+  </DefaultForms>
+  <StatusBar><QuickLaunchBar/><UtilitiesBar/></StatusBar>
+</Application>
+<!--lastMenuIndex=404-->
+<!--lastMenuItemIndex=826-->

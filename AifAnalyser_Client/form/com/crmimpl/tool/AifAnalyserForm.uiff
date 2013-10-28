@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://" uifid="Form" bounds="0,0,790,563" designerVersion="8.0" name="AifAnalyserForm" package="com.crmimpl.tool" postOpenMethodName="form_PostOpen" superform="com.amdocs.uif.workspace.UifForm" title="Form.title">
+  <WorkspaceEvents uifid="uifId91374151899633"/>
+  <ActionSet uifid="uifId11374151853151">
+    <SubmitAction uifid="uifId871380869034287" name="getOperationsList" actionDoneMethodName="getOperationsList_ActionDone" actionStartMethodName="getOperationsList_ActionStart" backendId="crm" operationName="com.crmimpl.tool.XAIfAnalyzeListXB" operationType="XBean">
+      <AuthInfo uifid="uifId881380869034865"/>
+      <ValidationInfo uifid="uifId891380869034865"/>
+      <RequestDataMap uifid="uifId1131381224898461">
+        <RequestMapItem uifid="uifId1101381224862149" dataReference="inputDM" dataValueType="DataModel" fieldName="URL" singleRow="false" targetPath="Url" sendEmptyDM="false"/>
+        <RequestMapItem uifid="uifId1111381224879118" dataReference="inputDM" dataValueType="DataModel" fieldName="user" singleRow="false" targetPath="TxtUserName" sendEmptyDM="false"/>
+        <RequestMapItem uifid="uifId1121381224897617" dataReference="inputDM" dataValueType="DataModel" fieldName="password" singleRow="false" targetPath="TxtPassword" sendEmptyDM="false"/>
+      </RequestDataMap>
+      <ResponseDataMap uifid="uifId1181381228587672">
+        <ResponseMapItem uifid="uifId1171381228586953" dataReference="OperationsTDM" singleRow="false" sourcePath="OperationArray"/>
+      </ResponseDataMap>
+      <PostSubmitAction uifid="uifId901380869034865"/>
+    </SubmitAction>
+    <SubmitAction uifid="uifId911380869040193" name="getOperationsDetail" actionDoneMethodName="getOperationsDetail_ActionDone" actionStartMethodName="getOperationsDetail_ActionStart" backendId="crm" operationName="com.crmimpl.tool.XAIfAnalyzeOperationXB" operationType="XBean">
+      <AuthInfo uifid="uifId921380869040240"/>
+      <ValidationInfo uifid="uifId931380869040240"/>
+      <RequestDataMap uifid="uifId1161381225043960">
+        <RequestMapItem uifid="uifId1141381225031492" dataReference="inputDM" dataValueType="DataModel" fieldName="Operation" singleRow="false" targetPath="OperationName" sendEmptyDM="false"/>
+        <RequestMapItem uifid="uifId1151381225043382" dataReference="inputDM" dataValueType="DataModel" fieldName="URL" singleRow="false" targetPath="mUrl" sendEmptyDM="false"/>
+      </RequestDataMap>
+      <ResponseDataMap uifid="uifId1201381229455182">
+        <ResponseMapItem uifid="uifId1191381229454479" dataReference="OpDetials" sourcePath="Operation"/>
+      </ResponseDataMap>
+      <PostSubmitAction uifid="uifId941380869040240"/>
+    </SubmitAction>
+    <SubmitAction uifid="uifId1241381304795286" name="getItemDetails" actionDoneMethodName="getItemDetails_ActionDone" actionStartMethodName="getItemDetails_ActionStart" backendId="crm" operationName="com.crmimpl.tool.XAifAnalyzeItemXB" operationType="XBean">
+      <AuthInfo uifid="uifId1251381304795832"/>
+      <ValidationInfo uifid="uifId1261381304795832"/>
+      <RequestDataMap uifid="uifId1351381310766747">
+        <RequestMapItem uifid="uifId1341381310765325" dataReference="inputDM" dataValueType="DataModel" fieldName="item" singleRow="false" targetPath="Item" sendEmptyDM="false"/>
+        <RequestMapItem uifid="uifId1361381313777166" dataReference="OpDetials" dataValueType="DataModel" singleRow="false" targetPath="Operation" sendEmptyDM="false"/>
+        <RequestMapItem uifid="uifId1491381920156339" dataReference="MapBindingTDM" dataValueType="TabularDataModel" singleRow="false" targetPath="Vm" sendEmptyDM="false"/>
+      </RequestDataMap>
+      <ResponseDataMap uifid="uifId1481381918944050">
+        <ResponseMapItem uifid="uifId1471381918943300" dataReference="ResourceDetail" sourcePath="Rd"/>
+        <ResponseMapItem uifid="uifId1511381992391574" dataReference="Classdetails" singleRow="false" sourcePath="ElementArray"/>
+      </ResponseDataMap>
+      <PostSubmitAction uifid="uifId1271381304795848"/>
+    </SubmitAction>
+  </ActionSet>
+  <Panel uifid="uifId21374151853152" name="root">
+    <AuthInfo uifid="uifId81374151879674"/>
+    <FormLayout uifid="uifId31374151853152" columns="76px default:grow default default" rows="top:96px top:default top:default top:default:grow"/>
+    <Tree uifid="uifId101374152530736" name="treeAifOperation" constraints="1,4,2,1,d,f" highlightMode="UifTree.HighlightMode.SINGLE" hyperlinkEnabled="false" wordWrapOn="true">
+      <AuthInfo uifid="uifId141374152531304"/>
+      <RootTemplate uifid="uifId111374152530775" autoExpanded="true" dataModelPath="rootNode" name="Root">
+        <NodeControl uifid="uifId121374152530776" name="TreeNodeControl_3" text="uifId121374152530776.text" toolTipText="uifId121374152530776.toolTipText">
+          <AuthInfo uifid="uifId381374210997507"/>
+          <ContextualMenu uifid="uifId131374152530776" name="Menu_4"/>
+        </NodeControl>
+        <TreeNodeTemplate uifid="uifId281374156606420" autoExpanded="true" dataModelPath="propertyTDM" name="OpProp">
+          <NodeControl uifid="uifId291374156606420" name="TreeNodeControl_7" activationAction="getItemDetails" toolTipText="uifId291374156606420.toolTipText">
+            <Binding uifid="uifId321374157163129">
+              <PropertyBinding uifid="uifId451374213532271" fieldName="name" propertyName="text"/>
+            </Binding>
+            <AuthInfo uifid="uifId311374156626987"/>
+            <ContextualMenu uifid="uifId301374156606420" name="Menu_8"/>
+          </NodeControl>
+          <TreeNodeTemplate uifid="uifId391374213392778" name="recursiveNode" recursiveTemplateName="OpProp">
+            <NodeControl uifid="uifId401374213392778" name="TreeNodeControl_13" closedIcon="uifId401374213392778.closedIcon" leafIcon="uifId401374213392778.leafIcon" openIcon="uifId401374213392778.openIcon" text="uifId401374213392778.text" toolTipText="uifId401374213392778.toolTipText">
+              <Binding uifid="uifId431374213420526">
+                <PropertyBinding uifid="uifId441374213420526" fieldName="name" propertyName="text"/>
+              </Binding>
+              <AuthInfo uifid="uifId421374213392789"/>
+              <ContextualMenu uifid="uifId411374213392778" name="Menu_14"/>
+            </NodeControl>
+          </TreeNodeTemplate>
+        </TreeNodeTemplate>
+      </RootTemplate>
+      <DataTransfer uifid="uifId151374152531343"/>
+    </Tree>
+    <Button uifid="uifId181374153051379" name="btnAnalyse" constraints="3,3" enabled="false" action="getOperationsDetail" text="uifId181374153051379.text">
+      <AuthInfo uifid="uifId191374153052404"/>
+    </Button>
+    <Textfield uifid="uifId501374216553776" name="txtQuickSearch" constraints="2,2" toolTipText="uifId501374216553776.toolTipText">
+      <AuthInfo uifid="uifId511374216553833"/>
+    </Textfield>
+    <Panel uifid="uifId521374220056305" name="Panel_16" constraints="1,1,2,1" title="uifId521374220056305.title">
+      <AuthInfo uifid="uifId541374220056377"/>
+      <FormLayout uifid="uifId531374220056332" columns="default 88px default default default 81px default default:grow" rows="top:default top:default top:default"/>
+      <Label uifid="uifId551374220106699" name="lblUrl1" constraints="1,1" text="uifId551374220106699.text">
+        <AuthInfo uifid="uifId561374220106786"/>
+      </Label>
+      <Textfield uifid="uifId571374220137438" name="txtServer" constraints="2,1" toolTipText="uifId571374220137438.toolTipText" text="uifId571374220137438.text">
+        <AuthInfo uifid="uifId581374220137495"/>
+      </Textfield>
+      <Label uifid="uifId591374220203416" name="lblColon2" constraints="5,1" text="uifId591374220203416.text">
+        <AuthInfo uifid="uifId601374220203585"/>
+      </Label>
+      <Textfield uifid="uifId611374220225842" name="txtPort" constraints="4,1" toolTipText="uifId611374220225842.toolTipText" text="uifId611374220225842.text">
+        <AuthInfo uifid="uifId621374220225887"/>
+      </Textfield>
+      <Label uifid="uifId631374220309932" name="lblColon1" constraints="3,1" text="uifId631374220309932.text">
+        <AuthInfo uifid="uifId641374220309964"/>
+      </Label>
+      <Textfield uifid="uifId651374220341490" name="txtInstance" constraints="6,1" toolTipText="uifId651374220341490.toolTipText" text="uifId651374220341490.text">
+        <AuthInfo uifid="uifId661374220341490"/>
+      </Textfield>
+      <Label uifid="uifId671374220396484" name="lblUser" constraints="1,2" text="uifId671374220396484.text">
+        <AuthInfo uifid="uifId681374220396532"/>
+      </Label>
+      <Label uifid="uifId691374220428131" name="lblPwd" constraints="1,3" text="uifId691374220428131.text">
+        <AuthInfo uifid="uifId701374220428131"/>
+      </Label>
+      <Textfield uifid="uifId711374220441981" name="txtUserName" constraints="2,2" text="uifId711374220441981.text">
+        <Binding uifid="uifId1051380870109312">
+          <PropertyBinding uifid="uifId1061380870109312" dataModel="inputDM" fieldName="user" modelUpdateMode="UifPropertyBinding.ModelUpdateMode.ONVALIDATION" propertyName="text"/>
+        </Binding>
+        <AuthInfo uifid="uifId721374220442063"/>
+      </Textfield>
+      <Textfield uifid="uifId731374220447421" name="txtPassword" constraints="2,3" text="uifId731374220447421.text">
+        <Binding uifid="uifId1071380870126452">
+          <PropertyBinding uifid="uifId1081380870126452" dataModel="inputDM" fieldName="password" modelUpdateMode="UifPropertyBinding.ModelUpdateMode.ONVALIDATION" propertyName="text"/>
+        </Binding>
+        <AuthInfo uifid="uifId741374220447473"/>
+      </Textfield>
+      <Button uifid="uifId771374220541588" name="btnRead" constraints="7,3" actionMethodName="btnRead_Action" text="uifId771374220541588.text">
+        <AuthInfo uifid="uifId781374220541654"/>
+      </Button>
+    </Panel>
+    <Combobox uifid="uifId751374220496811" name="cmbOperations" constraints="1,3,2,1" displayFieldName="Title" listTDM="OperationsTDM" valueFieldName="value">
+      <Binding uifid="uifId1211381229692852">
+        <PropertyBinding uifid="uifId1221381229692852" dataModel="inputDM" fieldName="Operation" modelUpdateMode="UifPropertyBinding.ModelUpdateMode.ONVALIDATION" propertyName="selectedText"/>
+      </Binding>
+      <AuthInfo uifid="uifId761374220496891"/>
+    </Combobox>
+    <Label uifid="uifId851374480001725" name="Label_32" constraints="1,2" text="uifId851374480001725.text">
+      <AuthInfo uifid="uifId861374480001804"/>
+    </Label>
+  </Panel>
+  <Parkinglot uifid="uifId41374151853153"/>
+  <Dataset uifid="uifId51374151853153">
+    <Datamodel uifid="uifId461374213713029" name="rootNode">
+      <VoMetadata uifid="uifId471374213713059" name="rootNode"/>
+      <TabularDatamodel uifid="uifId481374213725583" name="propertyTDM">
+        <Vometadata uifid="uifId491374213725583" name="TestTDM"/>
+      </TabularDatamodel>
+    </Datamodel>
+    <Datamodel uifid="uifId951380869762626" name="inputDM">
+      <VoMetadata uifid="uifId981380869762673" name="inputDM">
+        <Field uifid="uifId961380869762626" datatype="java.lang.String" name="URL"/>
+        <Field uifid="uifId971380869762626" datatype="java.lang.String" name="Operation"/>
+        <Field uifid="uifId1031380870087874" datatype="java.lang.String" name="user"/>
+        <Field uifid="uifId1041380870087874" datatype="java.lang.String" name="password"/>
+        <Field uifid="uifId1331381309392319" datatype="java.lang.String" name="item"/>
+        <Field uifid="uifId1441381322002972" datatype="java.lang.String" name="bindingType"/>
+      </VoMetadata>
+      <Field uifid="uifId1541382342120443" name="user" uifExternalizeValue="false" value="sa"/>
+      <Field uifid="uifId1551382342120443" name="password" uifExternalizeValue="false" value="sa"/>
+    </Datamodel>
+    <Datamodel uifid="uifId1091380890230454" backendId="crm" metadataName="com.crmimpl.aiftool.OperationItems" name="operationDM"/>
+    <Datamodel uifid="uifId1231381232526834" backendId="crm" metadataName="com.amdocs.aif.datamodel.Operation" name="OpDetials"/>
+    <Datamodel uifid="uifId1461381918913253" backendId="crm" metadataName="com.amdocs.aif.consumer.ResourceDesc" name="ResourceDetail"/>
+    <TabularDatamodel uifid="uifId811374221644989" name="OperationsTDM">
+      <Vometadata uifid="uifId821374221644989" name="OperationsTDM"/>
+    </TabularDatamodel>
+    <TabularDatamodel uifid="uifId831374222506005" name="backupOperationTDM">
+      <Vometadata uifid="uifId841374222506005" name="backupOperationTDM"/>
+    </TabularDatamodel>
+    <TabularDatamodel uifid="uifId1451381916517472" name="MapBindingTDM" backendId="crm" metadataName="$table:value_map"/>
+    <TabularDatamodel uifid="uifId1501381992299511" name="Classdetails" backendId="crm" metadataName="com.crmimpl.aiftool.ClassDetails"/>
+  </Dataset>
+  <Datacommset uifid="uifId61374151853154"/>
+  <Groups uifid="uifId71374151853154"/>
+</Form>
+<!--lastNameIndex=37-->
+<!--lastUifidIndex=157-->
+<!--schemaVersion=1.2-->
