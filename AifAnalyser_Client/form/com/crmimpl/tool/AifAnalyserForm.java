@@ -5,12 +5,18 @@ package com.crmimpl.tool;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.JTextField;
+import javax.swing.JTree;
+import javax.swing.tree.TreePath;
 
+import com.amdocs.uif.action.ActionInfra;
 import com.amdocs.uif.action.UifActionEvent;
 import com.amdocs.uif.action.UifCancellableActionEvent;
 import com.amdocs.uif.action.UifSubmitAction;
@@ -19,6 +25,7 @@ import com.amdocs.uif.data.UifDataModel;
 import com.amdocs.uif.data.UifDataset;
 import com.amdocs.uif.data.UifTabularDataModel;
 import com.amdocs.uif.event.UifCancellableEvent;
+import com.amdocs.uif.widgets.TreeNative;
 import com.amdocs.uif.widgets.UifButton;
 import com.amdocs.uif.widgets.UifComboBox;
 import com.amdocs.uif.widgets.UifLabel;
@@ -26,8 +33,10 @@ import com.amdocs.uif.widgets.UifPanel;
 import com.amdocs.uif.widgets.UifTextField;
 import com.amdocs.uif.widgets.UifTree;
 import com.amdocs.uif.widgets.tree.TreeNodeInfra;
+import com.amdocs.uif.widgets.tree.UifTreeNode;
 import com.amdocs.uif.workspace.UifForm;
 import com.amdocs.uif.workspace.UifFormEvent;
+import com.amdocs.uif.widgets.tree.UifPostTreeExpansionEvent;
 
 /**
  * @author ARAI
@@ -97,9 +106,25 @@ public class AifAnalyserForm extends UifForm {
 
 	protected UifSubmitAction getItemDetails;
 
-	protected HashMap<String, String> bindings = new HashMap<String, String>();
+	protected UifButton btnExpandAll;
+
+	private Map<String, Integer> bindings = new HashMap<String, Integer>();
 
 	private String url;
+	
+	private boolean isExpandAllClicked=false;	
+
+	public AifAnalyserForm() {
+		super();
+		bindings.put("AdapterBinding", 0);
+		bindings.put("AppFrameworkBinding", 1);
+		bindings.put("CustomAdapterBinding", 2);
+		bindings.put("EjbBinding", 3);
+		bindings.put("JmsBinding", 4);
+		bindings.put("TuxedoBinding", 5);
+		bindings.put("WebServiceBinding", 6);
+		bindings.put("CompositeBinding", 7);
+	}
 
 	/**
 	 * Inputs starting from here
@@ -179,14 +204,14 @@ public class AifAnalyserForm extends UifForm {
 							UifDataset.DataModelType.TABULARDATAMODEL, true);
 			int props = grandChildNodeTDM.addNew();
 			UifDataModel service = (UifDataModel) binding.getValue("Service");
-			System.out.println("=====>" + ((com.amdocs.uif.data.DataModelInfra)((UifTabularDataModel)service.getValue("Bindings")).getAt(0)).getXdo().getMetaDataName());
-			String bindingName = ((DataModelInfra)((UifTabularDataModel)service.getValue("Bindings")).getAt(0)).getXdo().getMetaDataName();
-			
+
+			String bindingName = ((DataModelInfra) ((UifTabularDataModel) service
+					.getValue("Bindings")).getAt(0)).getXdo().getMetaDataName();
+
 			grandChildNodeTDM.setValueAt(props, "name", "Binding -> "
-					+ bindingName.substring(bindingName.lastIndexOf(".")+1));
+					+ bindingName.substring(bindingName.lastIndexOf(".") + 1));
 			props = grandChildNodeTDM.addNew();
-			
-			
+
 			grandChildNodeTDM.setValueAt(props, "name", "Service Name -> "
 					+ service.getLocalizedStringValue("Name"));
 			props = grandChildNodeTDM.addNew();
@@ -194,13 +219,6 @@ public class AifAnalyserForm extends UifForm {
 					+ binding.getLocalizedStringValue("ResourceName"));
 
 			childNodeTDM.setValueAt(j, "propertyTDM", grandChildNodeTDM);
-			j = this.MapBindingTDM.addNew();
-
-			MapBindingTDM.setLocalizedStringValueAt(j, "parent_fld_val",
-					binding.getLocalizedStringValue("ResourceName"));
-			MapBindingTDM.setLocalizedStringValueAt(j, "child_fld_val",
-					((UifDataModel) binding.getValue("Type"))
-							.getLocalizedStringValue("Value"));
 		}
 		return childNodeTDM;
 	}
@@ -329,26 +347,36 @@ public class AifAnalyserForm extends UifForm {
 	 */
 	public void getItemDetails_ActionStart(UifCancellableActionEvent event) {
 		final String[] skipTypes = { "boolean", "java.lang.String", "int",
-				"long", "double", "byte", "char", "short", "float", "java.util.Date" };
+				"long", "double", "byte", "char", "short", "float",
+				"java.util.Date", "java.lang.Class" };
 		List<String> skipTypeList = Arrays.asList(skipTypes);
 		String item = event.getSource().toString();
-		nodeBoundDM = ((TreeNodeInfra) event.getSource()).getNodeDM();
-		if (item.contains("ResourceName")) {
-			inputDM.setLocalizedStringValue("bindingType",
-					bindings.get(item.replace("ResourceName -> ", "")));
+		nodeBoundDM = ((UifTreeNode) event.getSource()).getNodeDM();
+		if (item.contains("Binding -> ")) {
+			int j = MapBindingTDM.addNew();
+			MapBindingTDM.setValueAt(j, "parent_fld_val", "Binding");
+			MapBindingTDM.setValueAt(j, "child_fld_val", bindings.get(item.replace("Binding -> ", "")));
+
+			j = MapBindingTDM.addNew();
+			MapBindingTDM.setValueAt(j, "parent_fld_val", "Resource");
+			UifTabularDataModel propertyOfServiceNode = (UifTabularDataModel) ((UifTreeNode)((UifTreeNode)event.getSource()).getParent()).getNodeDM().getValue("propertyTDM");
+			int sizeOfTDM = propertyOfServiceNode.getRecordCount();
+			for(int i=0;i<sizeOfTDM;i++){
+				String name = propertyOfServiceNode.getStringValueAt(i, "name");
+				if(name.startsWith("ResourceName -> ")){
+					MapBindingTDM.setValueAt(j, "child_fld_val", name.replace("ResourceName -> ",""));
+				}
+			}
 		} else if (item.contains("Type -> ")) {
 			String clazzName = item.replace("Type -> ", "");
 			if (clazzName.endsWith("[]")) {
 				clazzName = clazzName.substring(0, clazzName.length() - 2);
 			}
-			if (skipTypeList.contains(clazzName)){
+			if (skipTypeList.contains(clazzName)) {
 				event.setCancel(true);
 				return;
 			}
-//		}else if (item.equals("Inputs") || item.equals("Outputs")) {
-//			event.setCancel(true);
-//			getOperationsDetail.execute();
-		}else {
+		} else {
 			event.setCancel(true);
 			return;
 		}
@@ -361,6 +389,61 @@ public class AifAnalyserForm extends UifForm {
 	 *            The event object.
 	 */
 	public void getItemDetails_ActionDone(UifActionEvent event) {
+		nodeBoundDM = ((UifTreeNode) event.getSource()).getNodeDM();
+		if (nodeBoundDM.getLocalizedStringValue("name").startsWith("Type ->")) {
+			handleDatatypeReturn();
+		}else if (nodeBoundDM.getLocalizedStringValue("name").startsWith("Binding ->")) {
+			handleResourceReturn();
+		}
+//		expandAllRecurser();
+	}
+
+	private void handleResourceReturn() {
+		UifTabularDataModel childNodeTDM = (UifTabularDataModel) this
+				.getDataset().createDataModel("childNodeTDM_Bindings",
+						UifDataset.DataModelType.TABULARDATAMODEL, true);
+
+		UifDataModel resourceDetails = Classdetails.getAt(0);
+		int props = childNodeTDM.addNew();
+		String jndi = resourceDetails.getStringValue("ParamType");
+		String homeClassName= "", remoteClassName= "", local= "", methodName = "";
+		String serviceName = (((UifTabularDataModel)nodeBoundDM.getParent()).getStringValueAt(1,"name")).replace("Service Name -> ","");
+		UifTabularDataModel bindingsFromOperation = (UifTabularDataModel) OpDetials.getValue("Bindings");
+		for(int i = 0; i<bindingsFromOperation.getRecordCount();i++){
+			UifDataModel serviceFromBinding = (UifDataModel) bindingsFromOperation.getValueAt(i, "Service");
+			if(serviceFromBinding.getLocalizedStringValue("Name").equals(serviceName)){
+				jndi=jndi.isEmpty()?serviceFromBinding.getLocalizedStringValue("JndiHomeLookupName"):jndi;
+				remoteClassName=serviceFromBinding.getLocalizedStringValue("RemoteClassName");
+				homeClassName=serviceFromBinding.getLocalizedStringValue("HomeClassName");
+				local=serviceFromBinding.getLocalizedStringValue("Local");
+				methodName = bindingsFromOperation.getStringValueAt(i, "MethodName");
+				
+			}
+		}
+		
+		childNodeTDM.setValueAt(props, "name",
+				"JNDI -> " + jndi);
+
+		props = childNodeTDM.addNew();
+		childNodeTDM.setValueAt(props, "name",
+				"Method -> " + methodName);
+
+		props = childNodeTDM.addNew();
+		childNodeTDM.setValueAt(props, "name",
+				"Remote Class -> " + remoteClassName);
+
+		props = childNodeTDM.addNew();
+		childNodeTDM.setValueAt(props, "name",
+				"Home Class -> " + homeClassName);
+
+		props = childNodeTDM.addNew();
+		childNodeTDM.setValueAt(props, "name",
+				"Local EJB -> " + local);
+
+		nodeBoundDM.setValue("propertyTDM", childNodeTDM);
+	}
+
+	private void handleDatatypeReturn() {
 		UifTabularDataModel childNodeTDM = (UifTabularDataModel) this
 				.getDataset().createDataModel("childNodeTDM_Bindings",
 						UifDataset.DataModelType.TABULARDATAMODEL, true);
@@ -370,31 +453,94 @@ public class AifAnalyserForm extends UifForm {
 
 			int props = childNodeTDM.addNew();
 			UifTabularDataModel grandChildNodeTDM = (UifTabularDataModel) this
-					.getDataset().createDataModel("grandChildNodeTDM_Bindings",
+					.getDataset()
+					.createDataModel("grandChildNodeTDM_Bindings",
 							UifDataset.DataModelType.TABULARDATAMODEL, true);
 
 			childNodeTDM.setValueAt(props, "name",
 					dataType.getLocalizedStringValue("ParamName"));
-			childNodeTDM.setValueAt(props, "propertyTDM", grandChildNodeTDM);
+			childNodeTDM
+					.setValueAt(props, "propertyTDM", grandChildNodeTDM);
 
 			props = grandChildNodeTDM.addNew();
-			grandChildNodeTDM
-					.setValueAt(
-							props,
-							"name",
-							"Type -> "
-									+ dataType
-											.getLocalizedStringValue("ParamType"));
+			grandChildNodeTDM.setValueAt(props, "name", "Type -> "
+					+ dataType.getLocalizedStringValue("ParamType"));
 
 		}
 		nodeBoundDM.setValue("propertyTDM", childNodeTDM);
 	}
 
 	/**
-	 * @param event The event object.
+	 * @param event
+	 *            The event object.
 	 */
 	public void getOperationsDetail_ActionStart(UifCancellableActionEvent event) {
-		System.out.println("sd");
-}
+		System.out.println("");
+	}
 
+	/**
+	 * @param event The event object.
+	 */
+	public void btnExpandAll_Action(UifCancellableEvent event) {
+//		isExpandAllClicked=true;
+		expandAllRecurser();
+	}
+
+	private void expandAllRecurser() {
+		try {
+			Field treeField = TreeNative.class.getDeclaredField("tree");
+			treeField.setAccessible(true);
+			JTree tree = (JTree) treeField.get(treeAifOperation);
+				expandAll(tree);
+			
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+//	private void expandAll(){
+//		
+//	}
+	
+	public void expandAll(JTree tree) {
+//		ArrayList<UifTreeNode> nodes = new ArrayList<UifTreeNode>();
+		try {
+
+			int count = tree.getRowCount();
+			for (int i = 0; i < count; ++i) {
+				if (!tree.isExpanded(i)) {
+					TreePath path = tree.getPathForRow(i);
+					UifTreeNode node = (UifTreeNode) path.getLastPathComponent();
+//					nodes.add(node);
+					System.out.println("==>" + node);
+					if(node.toString().startsWith("Binding") || node.toString().startsWith("Type ->")){
+						ActionInfra ae = ((ActionInfra)((TreeNodeInfra)node).getActivationAction());
+						ae.execute(node, null);
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+//		return ((UifTreeNode[]) nodes.toArray(new UifTreeNode[nodes.size()]));
+	}
+
+	/**
+	 * @param event The event object.
+	 */
+	public void treeAifOperation_PostNodeExpand(UifPostTreeExpansionEvent event) {
+//		if(isExpandAllClicked) expandAllRecurser();
+	}	
+	
 }
