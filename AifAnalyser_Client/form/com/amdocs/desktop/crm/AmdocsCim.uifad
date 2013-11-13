@@ -356,6 +356,7 @@
         <ActionRef action="LaunchCreateBillingProfile" name="menuItemCreateBillingProfileSimulator" text="actionref.menuItem824.text"/>
         <ActionRef action="LaunchCreateSubscriber" name="menuItemCreateSubscriber" text="actionref.menuItem825.text"/>
       </Menu>
+      <ActionRef action="LaunchAifAnalyser" name="menuItem827" text="actionref.menuItem827.text"/>
     </Menu>
   </MenuBar>
   <ToolBarPane>
@@ -395,11 +396,10 @@
     <FormRef logicalFormName="com.amdocs.crm.workspace.DeviceCareGlobal"/>
     <FormRef logicalFormName="com.amdocs.crm.cim.customerinfo.CustomerInfoBulkGlobal"/>
     <FormRef logicalFormName="com.amdocs.crm.common.GlobalUtility"/>
+    <FormRef logicalFormName="com.amdocs.bss.tool.aifAnalyser.AifAnalyserGlobal"/>
   </GlobalForms>
-  <DefaultForms>
-    <FormRef logicalFormName="com.crmimpl.tool.AifAnalyserForm"/>
-  </DefaultForms>
+  <DefaultForms/>
   <StatusBar><QuickLaunchBar/><UtilitiesBar/></StatusBar>
 </Application>
 <!--lastMenuIndex=404-->
-<!--lastMenuItemIndex=826-->
+<!--lastMenuItemIndex=827-->

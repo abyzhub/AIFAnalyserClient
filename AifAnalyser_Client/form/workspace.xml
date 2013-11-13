@@ -72,6 +72,10 @@
     <ParamValue>true</ParamValue>  	
   </InitParam>
   <InitParam>
+    <ParamName>AifAnalyser</ParamName>
+    <ParamValue>true</ParamValue>  	
+  </InitParam>
+  <InitParam>
     <ParamName>gridDefaultMaxNumRequested</ParamName>
     <ParamValue>200</ParamValue>
     <Description>Default Maximum Number of results for search grid</Description>
