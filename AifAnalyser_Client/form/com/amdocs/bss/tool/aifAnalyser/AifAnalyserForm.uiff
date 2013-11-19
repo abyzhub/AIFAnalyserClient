@@ -76,7 +76,7 @@
     <Button uifid="uifId181374153051379" name="btnAnalyse" constraints="3,3" enabled="false" action="getOperationsDetail" text="uifId181374153051379.text">
       <AuthInfo uifid="uifId191374153052404"/>
     </Button>
-    <Textfield uifid="uifId501374216553776" name="txtQuickSearch" constraints="2,2" toolTipText="uifId501374216553776.toolTipText">
+    <Textfield uifid="uifId501374216553776" name="txtQuickSearch" constraints="2,2" enabled="false" toolTipText="uifId501374216553776.toolTipText">
       <AuthInfo uifid="uifId511374216553833"/>
     </Textfield>
     <Panel uifid="uifId521374220056305" name="Panel_16" constraints="1,1,2,1" title="uifId521374220056305.title">
@@ -161,7 +161,6 @@
       <Field uifid="uifId1541382342120443" name="user" uifExternalizeValue="false" value="sa"/>
       <Field uifid="uifId1551382342120443" name="password" uifExternalizeValue="false" value="sa"/>
     </Datamodel>
-    <Datamodel uifid="uifId1091380890230454" backendId="crm" metadataName="com.crmimpl.aiftool.OperationItems" name="operationDM"/>
     <Datamodel uifid="uifId1231381232526834" backendId="crm" metadataName="com.amdocs.aif.datamodel.Operation" name="OpDetials"/>
     <Datamodel uifid="uifId1461381918913253" backendId="crm" metadataName="com.amdocs.aif.consumer.ResourceDesc" name="ResourceDetail"/>
     <TabularDatamodel uifid="uifId811374221644989" name="OperationsTDM">
@@ -170,7 +169,7 @@
     <TabularDatamodel uifid="uifId831374222506005" name="backupOperationTDM">
       <Vometadata uifid="uifId841374222506005" name="backupOperationTDM"/>
     </TabularDatamodel>
-    <TabularDatamodel uifid="uifId1501381992299511" name="Classdetails" backendId="crm" metadataName="com.amdocs.bss.tool.aifAnalyser.ClassDetails"/>
+    <TabularDatamodel uifid="uifId1501381992299511" name="Classdetails" backendId="crm" metadataName="com.amdocs.bss.tool.AifAnalyser.ClassDetails"/>
     <TabularDatamodel uifid="uifId1741384065884185" name="backends">
       <Vometadata uifid="uifId1751384065884186" name="backends">
         <Field uifid="uifId1691384065884167" datatype="java.lang.String" name="title"/>
@@ -182,7 +181,7 @@
         <Field uifid="uifId1731384065884168" name="title" uifExternalizeValue="false" value="Ordering"/>
       </Datamodel>
     </TabularDatamodel>
-    <TabularDatamodel uifid="uifId1801384067642978" name="MapBindingTDM" backendId="crm" metadataName="com.amdocs.bss.tool.aifAnalyser.OperationDetails"/>
+    <TabularDatamodel uifid="uifId1801384067642978" name="MapBindingTDM" backendId="crm" metadataName="com.amdocs.bss.tool.AifAnalyser.OperationDetails"/>
   </Dataset>
   <Datacommset uifid="uifId61374151853154"/>
   <Groups uifid="uifId71374151853154"/>

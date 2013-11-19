@@ -73,8 +73,6 @@ public class AifAnalyserForm extends UifForm {
 
 	protected UifDataModel inputDM;
 
-	protected UifDataModel operationDM;
-
 	protected UifDataModel OpDetials;
 
 	protected UifDataModel ResourceDetail;
@@ -267,6 +265,7 @@ public class AifAnalyserForm extends UifForm {
 	 */
 	public void form_PostOpen(UifFormEvent event) {
 		addTextListeners();
+		btnRead.setFocus();
 	}
 
 	private void addTextListeners() {
@@ -342,6 +341,7 @@ public class AifAnalyserForm extends UifForm {
 		backUpTDM();
 		getWorkspace().alert("Data Loaded!");
 		btnAnalyse.setEnabled(true);
+		txtQuickSearch.setEnabled(true);
 	}
 
 	/**
@@ -616,8 +616,10 @@ public class AifAnalyserForm extends UifForm {
 			return;
 
 		try {
+			String fileName=fileDscrptr[0].getAbsolutePath();
+			fileName = fileName.endsWith(".xls")?fileName:fileName+".xls";
 			FileOutputStream fileOut = new FileOutputStream(
-					fileDscrptr[0].getAbsolutePath()+".xls");
+					fileDscrptr[0].getAbsolutePath());
 			HSSFWorkbook workbook = new HSSFWorkbook();
 			HSSFSheet apiDetailsSheet = workbook.createSheet("API Details");
 			HSSFCellStyle cellStyleHeader = workbook.createCellStyle();
