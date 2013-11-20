@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://" uifid="Form" bounds="0,0,790,563" designerVersion="8.0" name="AifAnalyserGlobal" package="com.amdocs.bss.tool.aifAnalyser" postOpenMethodName="form_PostOpen" superform="com.amdocs.uif.workspace.UifForm" title="Form.title">
+  <WorkspaceEvents uifid="uifId81384109174535"/>
+  <ActionSet uifid="uifId11384109169634">
+    <LaunchAction uifid="uifId121384109186518" name="LaunchAifAnalyser" publishedName="LaunchAifAnalyser" visible="false" logicalFormName="com.amdocs.bss.tool.aifAnalyser.AifAnalyserForm">
+      <AuthInfo uifid="uifId131384109186527"/>
+      <ValidationInfo uifid="uifId141384109186527"/>
+    </LaunchAction>
+  </ActionSet>
+  <Panel uifid="uifId21384109169634" name="root">
+    <FormLayout uifid="uifId31384109169634" columns="default default default default" rows="top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default top:default"/>
+  </Panel>
+  <Parkinglot uifid="uifId41384109169634"/>
+  <Dataset uifid="uifId51384109169634"/>
+  <Datacommset uifid="uifId61384109169634"/>
+  <Groups uifid="uifId71384109169634"/>
+</Form>
+<!--lastNameIndex=2-->
+<!--lastUifidIndex=14-->
+<!--schemaVersion=1.2-->

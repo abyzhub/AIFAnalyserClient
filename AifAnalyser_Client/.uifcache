@@ -1,0 +1,3 @@
+<Form name="com.amdocs.bss.tool.aifAnalyser.AifAnalyserForm"superform="com.amdocs.uif.workspace.UifForm"designNotes="" />
+<Form name="com.amdocs.bss.tool.aifAnalyser.AifAnalyserGlobal"superform="com.amdocs.uif.workspace.UifForm"designNotes="" />
+<App name="com.amdocs.desktop.crm.AmdocsCim"designNotes="" />

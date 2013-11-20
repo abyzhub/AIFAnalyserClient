@@ -1,0 +1,11 @@
+#AIF Configurations. Stored : Tue Nov 19 15:20:57 IST 2013
+#Tue Nov 19 15:20:57 IST 2013
+AscRootNode=/
+OutputPath=
+Categories=rO0ABXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAAF0AAA\=
+RepositoryRoot=/AifAnalyser_Client
+eclipse.preferences.version=1
+ValidTypes=char;char;long;long;float;float;short;short;int;int;Date;java.util.Date;String;java.lang.String;double;double;boolean;boolean;byte;byte;
+CustomizationLevel=0
+AscRootPath=
+AllowArbitraryJavaClassForBaseType=false
